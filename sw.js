@@ -1,4 +1,15 @@
+self.addEventListener('install', (event) => {
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', (event) => {
+  return self.clients.claim();
+});
 
 self.addEventListener('fetch', (event) => {
-  // ปล่อยให้โหลดข้อมูลตามปกติ
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request);
+    })
+  );
 });
