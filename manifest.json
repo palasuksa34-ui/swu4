@@ -3,12 +3,12 @@
   "name": "My Progressive Web App",
   "icons": [
     {
-      "src": "SWU 4-192.png",
+      "src": "SWU4-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "SWU 4-512.png",
+      "src": "SWU4-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
